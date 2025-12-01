@@ -4,7 +4,7 @@ if (!isset($_SESSION['bobotc1']) && !isset($_SESSION['bobotc2']) && !isset($_SES
     echo "<script>alert('Anda belum melakukan perhitungan bobot!!'); window.location='./perhitungan.php'</script>";
 }
 
-if (isset($_POST['vektor']) || isset($_POST['ratio'])) {
+if (isset($_POST['vektor']) || isset($_POST['ratio']) || isset($_POST['CI'])) {
     $c1a = $_POST['c1a'] ?? "";
     $c1b = $_POST['c1b'] ?? "";
     $c1c = $_POST['c1c'] ?? "";
@@ -34,7 +34,7 @@ if (isset($_POST['vektor']) || isset($_POST['ratio'])) {
     $hasilc3 = round($hasilc3, 3);
 }
 
-if (isset($_POST['ratio'])) {
+if (isset($_POST['ratio']) || isset($_POST['CI'])) {
     $c1a = $_POST['c1a'] ?? "";
     $c1b = $_POST['c1b'] ?? "";
     $c1c = $_POST['c1c'] ?? "";
